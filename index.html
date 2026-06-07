@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Peter Nelson</title>
+
+<!--
+  ┌─────────────────────────────────────────────────────────────┐
+  │  EDIT ME:  Replace the LinkedIn URL below with your profile.  │
+  │  Look for   data-linkedin="..."   on the <a> tag.             │
+  └─────────────────────────────────────────────────────────────┘
+-->
+
+<style>
+  :root {
+    --bg:        #f5f5f7;
+    --surface:   rgba(255, 255, 255, 0.72);
+    --surface-2: rgba(255, 255, 255, 0.55);
+    --ink:       #1d1d1f;
+    --ink-soft:  #6e6e73;
+    --ink-faint: #86868b;
+    --line:      rgba(0, 0, 0, 0.08);
+    --accent:    #0071e3;
+    --accent-2:  #0a84ff;
+    --radius:    22px;
+    --ease:      cubic-bezier(0.22, 1, 0.36, 1);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                 "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── Ambient background ──────────────────────────────────── */
+  .aura {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .aura::before,
+  .aura::after {
+    content: "";
+    position: absolute;
+    width: 60vmax;
+    height: 60vmax;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.5;
+    will-change: transform;
+  }
+  .aura::before {
+    background: radial-gradient(circle at 30% 30%, #7dbbff, transparent 65%);
+    top: -22vmax;
+    left: -14vmax;
+    animation: drift1 26s var(--ease) infinite alternate;
+  }
+  .aura::after {
+    background: radial-gradient(circle at 70% 70%, #ffd6a5, transparent 65%);
+    bottom: -24vmax;
+    right: -16vmax;
+    animation: drift2 30s var(--ease) infinite alternate;
+  }
+  @keyframes drift1 {
+    to { transform: translate(8vmax, 6vmax) scale(1.12); }
+  }
+  @keyframes drift2 {
+    to { transform: translate(-7vmax, -5vmax) scale(1.08); }
+  }
+
+  /* subtle grain */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: clamp(72px, 14vh, 160px) 28px 80px;
+  }
+
+  /* ── Hero ────────────────────────────────────────────────── */
+  header { margin-bottom: clamp(56px, 9vh, 96px); }
+
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: clamp(52px, 11vw, 92px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    background: linear-gradient(180deg, #1d1d1f 0%, #3a3a3e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .lede {
+    margin-top: 22px;
+    font-size: clamp(18px, 2.4vw, 21px);
+    font-weight: 400;
+    color: var(--ink-soft);
+    max-width: 30ch;
+    letter-spacing: -0.012em;
+  }
+
+  /* ── Contact pills ───────────────────────────────────────── */
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 36px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 22px;
+    border-radius: 980px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform .4s var(--ease), box-shadow .4s var(--ease),
+                background .3s var(--ease);
+  }
+  .pill svg { width: 17px; height: 17px; }
+  .pill.primary {
+    background: var(--ink);
+    color: #fff;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+  }
+  .pill.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 34px rgba(0,0,0,0.26);
+  }
+  .pill.ghost {
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .pill.ghost:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+  }
+
+  /* ── Section label ───────────────────────────────────────── */
+  .section-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 20px;
+  }
+
+  /* ── Project cards ───────────────────────────────────────── */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 30px 32px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    overflow: hidden;
+    transition: transform .55s var(--ease), box-shadow .55s var(--ease),
+                background .4s var(--ease);
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(120deg, rgba(0,113,227,0.06), transparent 55%);
+    opacity: 0;
+    transition: opacity .5s var(--ease);
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+  }
+  .card:hover::after { opacity: 1; }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .card h2 {
+    font-size: clamp(22px, 3.4vw, 28px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+  }
+  .card p {
+    margin-top: 8px;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    letter-spacing: -0.008em;
+  }
+  .card .domain {
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-faint);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    letter-spacing: 0;
+  }
+
+  .arrow {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,0.04);
+    color: var(--ink);
+    transition: transform .5s var(--ease), background .4s var(--ease);
+  }
+  .arrow svg { width: 18px; height: 18px; }
+  .card:hover .arrow {
+    background: var(--accent);
+    color: #fff;
+    transform: translateX(4px);
+  }
+
+  /* ── Footer ──────────────────────────────────────────────── */
+  footer {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+
+  /* ── Entrance animation ──────────────────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: rise .9s var(--ease) forwards;
+  }
+  @keyframes rise {
+    to { opacity: 1; transform: none; }
+  }
+  .d1 { animation-delay: .05s; }
+  .d2 { animation-delay: .15s; }
+  .d3 { animation-delay: .25s; }
+  .d4 { animation-delay: .38s; }
+  .d5 { animation-delay: .50s; }
+  .d6 { animation-delay: .62s; }
+  .d7 { animation-delay: .74s; }
+  .d8 { animation-delay: .86s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; transform: none; }
+    .aura::before, .aura::after { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 560px) {
+    .card { padding: 26px 24px; }
+    .arrow { width: 38px; height: 38px; }
+  }
+</style>
+</head>
+<body>
+  <div class="aura"></div>
+  <div class="grain"></div>
+
+  <main class="wrap">
+    <header>
+      <h1 class="reveal d2">Peter Nelson</h1>
+
+      <nav class="contact reveal d4">
+        <!-- ⬇️ Replace the href below with your real LinkedIn profile URL -->
+        <a class="pill primary" data-linkedin href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="pill ghost" href="mailto:ponelson@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+          ponelson@gmail.com
+        </a>
+      </nav>
+    </header>
+
+    <section>
+      <div class="section-label reveal d5">Selected Work</div>
+
+      <div class="projects">
+        <a class="card reveal d6" href="https://ponelson.github.io/regulationarcheology/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Archeology of Regulation</h2>
+              <p>Excavating the deep history and path dependence of how technology gets governed.</p>
+              <div class="domain">ponelson.github.io/regulationarcheology</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d7" href="https://ponelson.github.io/integrated-defense/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>An Adaptive Integrated Defense Acquisition Chart</h2>
+              <p>An interactive reference for navigating the adaptive defense acquisition pathways.</p>
+              <div class="domain">ponelson.github.io/integrated-defense</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d8" href="https://ponelson.github.io/ai-model-stack/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>The AI Model Stack</h2>
+              <p>A layer-by-layer map of the companies and infrastructure powering modern AI.</p>
+              <div class="domain">ponelson.github.io/ai-model-stack</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d8" href="https://ponelson.github.io/ai-innards/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>AI Innards</h2>
+              <p>A look inside the model — weights, embeddings, and the machinery beneath the surface.</p>
+              <div class="domain">ponelson.github.io/ai-innards</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d8" href="https://ponelson.github.io/aiglossary/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>AI Glossary</h2>
+              <p>Fifty terms, from backpropagation to Jevons' paradox — searchable and opinionated.</p>
+              <div class="domain">ponelson.github.io/aiglossary</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d8" href="https://ponelson.github.io/sports/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Sports</h2>
+              <p>A side project on the games, numbers, and stories worth following.</p>
+              <div class="domain">ponelson.github.io/sports</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d8" href="https://ponelson.github.io/fund-model/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Fund Model WIP</h2>
+              <p>A work-in-progress model for fund economics and returns.</p>
+              <div class="domain">ponelson.github.io/fund-model</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d8" href="https://ponelson.github.io/piano/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Jazz Piano</h2>
+              <p>Modal systems, voicings, and the geometry of movement across the keyboard.</p>
+              <div class="domain">ponelson.github.io/piano</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="reveal d8">
+      <span>© <span id="yr"></span> Peter Nelson</span>
+      <a href="https://github.com/ponelson" target="_blank" rel="noopener">github.com/ponelson</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
