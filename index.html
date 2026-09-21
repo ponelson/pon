@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Peter Nelson v1.7 — selected work</title>
-<meta property="og:title" content="Peter Nelson v1.7 — selected work" />
+<title>Peter Nelson v1.9 — selected work</title>
+<meta property="og:title" content="Peter Nelson v1.9 — selected work" />
 <meta property="og:type" content="website" />
 <meta name="description" content="Selected interactive work by Peter Nelson." />
 
@@ -299,6 +299,15 @@
     font-family: ui-monospace, "SF Mono", Menlo, monospace;
     letter-spacing: 0;
   }
+  .card .updated,
+  .updated {
+    margin-top: 4px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink-faint);
+    letter-spacing: 0;
+  }
+  .updated.inline { margin-left: 6px; }
   .protected-note {
     display: inline-flex;
     align-items: center;
@@ -401,7 +410,7 @@
 
   <main class="wrap">
     <header>
-      <div class="eyebrow reveal d1">Index / <strong>v1.7</strong> · 11 September 2026, 8:27 AM ET · build 2026-09-11T08:27-04:00</div>
+      <div class="eyebrow reveal d1">Index / <strong>v1.9</strong> · 21 September 2026, 8:03 AM ET · build 2026-09-21T08:03-04:00</div>
       <h1 class="reveal d2">Peter Nelson</h1>
 
       <nav class="contact reveal d4">
@@ -435,6 +444,7 @@
               <h2>Hysteresis &amp; Memory</h2>
               <p>An exploration of how systems retain the imprint of their past — and why history continues to shape what comes next.</p>
               <div class="domain">ponelson.github.io/memory</div>
+              <div class="updated">Updated <time datetime="2026-09-11">11 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -448,6 +458,7 @@
               <h2>Systems of Thinking</h2>
               <p>A working reference on the frameworks people use to reason — how they are built, where they hold, and where they break.</p>
               <div class="domain">ponelson.github.io/systems</div>
+              <div class="updated">Updated <time datetime="2026-08-30">30 August 2026</time></div>
               <div class="protected-note">Password protected</div>
             </div>
             <span class="arrow" aria-hidden="true">
@@ -462,20 +473,8 @@
               <h2>The Delta: The Thermodynamics of Being Alive</h2>
               <p>A living thing is a shape that survives by passing energy through itself. Twenty-two interactive sections on structure, entropy, and what it costs to know yourself.</p>
               <div class="domain">ponelson.github.io/dissipativestructures</div>
+              <div class="updated">Updated <time datetime="2026-09-09">9 September 2026</time></div>
               <div class="protected-note">Password protected</div>
-            </div>
-            <span class="arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <a class="card reveal d6" href="https://ponelson.github.io/firsttwice/" target="_blank" rel="noopener">
-          <div class="card-row">
-            <div>
-              <h2>Discovered First, Twice</h2>
-              <p>An atlas of simultaneous discovery — inventions, ideas, and places independently arrived at by more than one mind, before history remembered only one.</p>
-              <div class="domain">ponelson.github.io/firsttwice</div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -489,7 +488,7 @@
               <h2>Unnatural Resources</h2>
               <p>When Compute Ate Culture. A field guide to consolidation, tracing how culture became the raw material that trains models, captures identity, and steers human behavior.</p>
               <div class="domain">ponelson.github.io/unnaturalresources</div>
-              <div class="protected-note">Password protected</div>
+              <div class="updated">Updated <time datetime="2026-08-31">31 August 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -503,6 +502,7 @@
               <h2>Archeology of Regulation</h2>
               <p>Excavating the deep history and path dependence of how technology gets governed.</p>
               <div class="domain">ponelson.github.io/regulationarcheology</div>
+              <div class="updated">Updated <time datetime="2026-08-27">27 August 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -516,6 +516,7 @@
               <h2>Archeology as Architecture</h2>
               <p>Reading the built environment as a record of the decisions layered into it over time.</p>
               <div class="domain">ponelson.github.io/archae-of-archi</div>
+              <div class="updated">Updated <time datetime="2026-08-27">27 August 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -523,12 +524,63 @@
           </div>
         </a>
 
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="section-label reveal d5">Curiosities</div>
+
+      <div class="projects">
+
         <a class="card reveal d6" href="https://ponelson.github.io/opensourcevalue/" target="_blank" rel="noopener">
           <div class="card-row">
             <div>
               <h2>The Value of Open Source</h2>
               <p>What open source is really worth: its economics, leverage, and hidden returns.</p>
               <div class="domain">ponelson.github.io/opensourcevalue</div>
+              <div class="updated">Updated <time datetime="2026-08-28">28 August 2026</time></div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d6" href="https://ponelson.github.io/firsttwice/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Discovered First, Twice</h2>
+              <p>An atlas of simultaneous discovery — inventions, ideas, and places independently arrived at by more than one mind, before history remembered only one.</p>
+              <div class="domain">ponelson.github.io/firsttwice</div>
+              <div class="updated">Updated <time datetime="2026-08-28">28 August 2026</time></div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d6" href="https://ponelson.github.io/naming-movements/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Worn as a Badge</h2>
+              <p>Styles, sects, parties, and theories whose names began as insults thrown by critics, rivals, or authorities — and were later adopted, with pride or at least without apology, by the people they targeted. Each entry gives the coiner, the source, what the jab meant, and how the name turned.</p>
+              <div class="domain">ponelson.github.io/naming-movements</div>
+              <div class="updated">Updated <time datetime="2026-09-21">21 September 2026</time></div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d6" href="https://ponelson.github.io/bemyneighbor/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Blame the Neighbor</h2>
+              <p>Every people names its troubles after someone else. Syphilis was French to the English, Italian to the French, Spanish to the Dutch and Christian to the Ottomans. This is the full pattern: diseases, vermin, manners, vice, incomprehension, and the milder branch where a turkey is Indian and a Danish is Viennese.</p>
+              <div class="domain">ponelson.github.io/bemyneighbor</div>
+              <div class="updated">Updated <time datetime="2026-09-21">21 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -550,6 +602,7 @@
               <h2>Compute Market</h2>
               <p>A guide to the market for computational power — its infrastructure, economics, and emerging participants.</p>
               <div class="domain">ponelson.github.io/computemarket</div>
+              <div class="updated">Updated <time datetime="2026-09-21">21 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -563,6 +616,7 @@
               <h2>The AI Model Stack</h2>
               <p>A layer-by-layer map of the companies and infrastructure powering modern AI.</p>
               <div class="domain">ponelson.github.io/ai-model-stack</div>
+              <div class="updated">Updated <time datetime="2026-09-21">21 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -576,6 +630,7 @@
               <h2>AI Innards</h2>
               <p>A look inside the model: weights, embeddings, and the machinery beneath the surface.</p>
               <div class="domain">ponelson.github.io/ai-innards</div>
+              <div class="updated">Updated <time datetime="2026-09-11">11 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -589,6 +644,7 @@
               <h2>AI Glossary</h2>
               <p>Fifty terms, from backpropagation to Jevons' paradox. Searchable and opinionated.</p>
               <div class="domain">ponelson.github.io/aiglossary</div>
+              <div class="updated">Updated <time datetime="2026-09-11">11 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -602,6 +658,7 @@
               <h2>Intro to RAG</h2>
               <p>How retrieval-augmented generation works, from embeddings to grounded answers.</p>
               <div class="domain">ponelson.github.io/rag</div>
+              <div class="updated">Updated <time datetime="2026-09-11">11 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -615,6 +672,7 @@
               <h2>Field Note: World Models (July 2026)</h2>
               <p>When Machines Learned to Dream. A field guide to world models, tracing how a recording of the world becomes a place you can enter, an environment agents train inside, and a simulator that can look flawless while getting cause and effect wrong.</p>
               <div class="domain">ponelson.github.io/worldmodels</div>
+              <div class="updated">Updated <time datetime="2026-09-12">12 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -628,6 +686,7 @@
               <h2>Field Note: Agent Medicine (July 2026)</h2>
               <p>When Machines Got Minds and No Bodies. A field guide to agent physiology, tracing how the nervous system got mined for eighty years, the rest of the body got skipped, and the failures now blocking production agents turned out to be body failures.</p>
               <div class="domain">ponelson.github.io/agentmedicine</div>
+              <div class="updated">Updated <time datetime="2026-07-24">24 July 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -641,6 +700,7 @@
               <h2>The Circular Economy of AI Capital</h2>
               <p>A sourced map of who funds whom across the global AI buildout — the chip vendors, hyperscalers, labs, and neoclouds whose capital keeps returning to its own starting point.</p>
               <div class="domain">ponelson.github.io/aicircles</div>
+              <div class="updated">Updated <time datetime="2026-09-21">21 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -654,6 +714,7 @@
               <h2>An Adaptive Integrated Defense Acquisition Chart</h2>
               <p>An interactive reference for navigating the adaptive defense acquisition pathways.</p>
               <div class="domain">ponelson.github.io/integrated-defense</div>
+              <div class="updated">Updated <time datetime="2026-08-28">28 August 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -675,6 +736,7 @@
               <h2>Energy</h2>
               <p>What it is and how it works.</p>
               <div class="domain">ponelson.github.io/energy</div>
+              <div class="updated">Updated <time datetime="2026-08-27">27 August 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -688,6 +750,7 @@
               <h2>Mining From the Rock Up</h2>
               <p>A ground-up guide to the mining industry — geology, mine design, processing, economics, valuation and cost metrics, financing, tax structure, promotional red flags, and the 2026 competitive map. Built for readers with no prior background.</p>
               <div class="domain">ponelson.github.io/mining</div>
+              <div class="updated">Updated <time datetime="2026-09-10">10 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -701,6 +764,7 @@
               <h2>Oil</h2>
               <p>A companion to the mining guide, running from reservoir to refinery: how crude is found, produced, moved, priced, and booked.</p>
               <div class="domain">ponelson.github.io/oil</div>
+              <div class="updated">Updated <time datetime="2026-09-10">10 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -714,6 +778,7 @@
               <h2>Commodities From First Principles</h2>
               <p>A ground-up field guide to commodity markets: physical balances, the futures curve, basis, hedging, instruments, return engines, research method, and the promotional playbook. Built for readers starting at zero.</p>
               <div class="domain">ponelson.github.io/commodities</div>
+              <div class="updated">Updated <time datetime="2026-09-10">10 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -735,6 +800,7 @@
               <h2>Jazz Piano</h2>
               <p>Modal systems, voicings, and the geometry of movement across the keyboard.</p>
               <div class="domain">ponelson.github.io/piano</div>
+              <div class="updated">Updated <time datetime="2026-08-27">27 August 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -748,19 +814,7 @@
               <h2>Sanskrit</h2>
               <p>A learner’s reference for Sanskrit: script and sounds, sandhi, declension and conjugation, and reading practice.</p>
               <div class="domain">ponelson.github.io/sanskrit</div>
-            </div>
-            <span class="arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <a class="card reveal d6" href="https://ponelson.github.io/sports/" target="_blank" rel="noopener">
-          <div class="card-row">
-            <div>
-              <h2>Sports</h2>
-              <p>A side project on the games, numbers, and stories worth following.</p>
-              <div class="domain">ponelson.github.io/sports</div>
+              <div class="updated">Updated <time datetime="2026-07-16">16 July 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -774,6 +828,7 @@
               <h2>Gardening</h2>
               <p>Interactive garden and landscape maps with plants, animals, and practical design ideas.</p>
               <div class="domain">ponelson.github.io/garden</div>
+              <div class="updated">Updated <time datetime="2026-09-17">17 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -787,6 +842,7 @@
               <h2>Luxury Hotel Atlas</h2>
               <p>A map-first, source-aware guide to the world's great hotels — Aman and Belmond to the singular art properties — in one travel console.</p>
               <div class="domain">ponelson.github.io/stay</div>
+              <div class="updated">Updated <time datetime="2026-09-18">18 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -800,6 +856,7 @@
               <h2>Paris Day Trips</h2>
               <p>Where to go when you leave Paris for the day: châteaux, cathedrals, coastline and vineyards, with the train times and the case for each.</p>
               <div class="domain">ponelson.github.io/parisdaytrips</div>
+              <div class="updated">Updated <time datetime="2026-09-09">9 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -813,19 +870,7 @@
               <h2>City by the Day</h2>
               <p>A day-by-day calendar of what's happening across New York City.</p>
               <div class="domain">ponelson.github.io/nyc-calendar</div>
-            </div>
-            <span class="arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <a class="card reveal d6" href="https://ponelson.github.io/crownsupply/" target="_blank" rel="noopener">
-          <div class="card-row">
-            <div>
-              <h2>Crown Supply</h2>
-              <p>A working ledger of the tradespeople, tailors, jewellers, and grocers who hold — or once held — royal appointment across the world's monarchies.</p>
-              <div class="domain">ponelson.github.io/crownsupply</div>
+              <div class="updated">Updated <time datetime="2026-09-20">20 September 2026</time></div>
             </div>
             <span class="arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -841,40 +886,13 @@
 
       <div class="projects">
 
-        <a class="card reveal d6" href="https://ponelson.github.io/healthcare/" target="_blank" rel="noopener">
-          <div class="card-row">
-            <div>
-              <h2>Healthcare Calculator</h2>
-              <p>An interactive tool for working through healthcare costs, coverage, and the math behind what a plan actually pays.</p>
-              <div class="domain">ponelson.github.io/healthcare</div>
-              <div class="protected-note">Password protected</div>
-            </div>
-            <span class="arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </span>
-          </div>
-        </a>
-
         <a class="card reveal d6" href="https://ponelson.github.io/tax" target="_blank" rel="noopener">
           <div class="card-row">
             <div>
               <h2>Tax &amp; Estate</h2>
               <p>A working reference on tax and estate planning — structures, rules, and the decisions behind them.</p>
               <div class="domain">ponelson.github.io/tax</div>
-              <div class="protected-note">Password protected</div>
-            </div>
-            <span class="arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <a class="card reveal d6" href="https://ponelson.github.io/finra/" target="_blank" rel="noopener">
-          <div class="card-row">
-            <div>
-              <h2>FINRA Exam Prep</h2>
-              <p>Study reference and practice for the SIE, 63, 82, and 79 exams.</p>
-              <div class="domain">ponelson.github.io/finra</div>
+              <div class="updated">Updated <time datetime="2026-09-17">17 September 2026</time></div>
               <div class="protected-note">Password protected</div>
             </div>
             <span class="arrow" aria-hidden="true">
@@ -889,6 +907,7 @@
               <h2>Hollywood Accounting</h2>
               <p>An interactive guide to the economics of movies, including production budgets, marketing, distribution, exhibition, financing, recoupment, participations, and the math behind how films make money.</p>
               <div class="domain">ponelson.github.io/hollywoodaccounting</div>
+              <div class="updated">Updated <time datetime="2026-09-10">10 September 2026</time></div>
               <div class="protected-note">Password protected</div>
             </div>
             <span class="arrow" aria-hidden="true">
@@ -903,6 +922,117 @@
               <h2>Fund Model WIP</h2>
               <p>A work-in-progress model for fund economics and returns.</p>
               <div class="domain">ponelson.github.io/fund-model</div>
+              <div class="updated">Updated <time datetime="2026-09-06">6 September 2026</time></div>
+              <div class="protected-note">Password protected</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d6" href="https://ponelson.github.io/sports/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Sports</h2>
+              <p>A side project on the games, numbers, and stories worth following.</p>
+              <div class="domain">ponelson.github.io/sports</div>
+              <div class="updated">Updated <time datetime="2026-08-26">26 August 2026</time></div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d6" href="https://ponelson.github.io/crownsupply/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Crown Supply</h2>
+              <p>A working ledger of the tradespeople, tailors, jewellers, and grocers who hold — or once held — royal appointment across the world's monarchies.</p>
+              <div class="domain">ponelson.github.io/crownsupply</div>
+              <div class="updated">Updated <time datetime="2026-08-27">27 August 2026</time></div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="section-label reveal d5">Financial Tools</div>
+
+      <div class="projects">
+
+        <a class="card reveal d6" href="https://ponelson.github.io/finra/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>FINRA Exam Prep</h2>
+              <p>Study reference and practice for the SIE, 63, 82, and 79 exams.</p>
+              <div class="domain">ponelson.github.io/finra</div>
+              <div class="updated">Updated <time datetime="2026-08-30">30 August 2026</time></div>
+              <div class="protected-note">Password protected</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d6" href="https://ponelson.github.io/healthcare/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Healthcare Calculator</h2>
+              <p>An interactive tool for working through healthcare costs, coverage, and the math behind what a plan actually pays.</p>
+              <div class="domain">ponelson.github.io/healthcare</div>
+              <div class="updated">Updated <time datetime="2026-08-30">30 August 2026</time></div>
+              <div class="protected-note">Password protected</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="section-label reveal d5">Special Ops</div>
+
+      <div class="projects">
+
+        <a class="card reveal d6" href="https://ponelson.github.io/agenticmemory2026/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Agentic Memory 2026</h2>
+              <div class="protected-note">Password protected</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d6" href="https://ponelson.github.io/institutionalcapital/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Institutional Capital</h2>
+              <div class="protected-note">Password protected</div>
+            </div>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="card reveal d6" href="https://ponelson.github.io/insurancejepn/" target="_blank" rel="noopener">
+          <div class="card-row">
+            <div>
+              <h2>Insurance</h2>
               <div class="protected-note">Password protected</div>
             </div>
             <span class="arrow" aria-hidden="true">
@@ -917,15 +1047,15 @@
     <div class="wrap" style="padding-top: 40px; border-top: 1px solid var(--line); margin-top: 56px;">
       <div class="section-label">Also Live</div>
       <div style="display: flex; flex-direction: column; gap: 12px;">
-        <a href="https://ponelson.github.io/kmath/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">ponelson.github.io/kmath</a>
-        <a href="https://ponelson.github.io/kkhnn/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">ponelson.github.io/kkhn</a>
+        <div><a href="https://ponelson.github.io/kmath/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">ponelson.github.io/kmath</a> <span class="updated inline">· Updated <time datetime="2026-09-02">2 September 2026</time></span></div>
+        <div><a href="https://ponelson.github.io/kkhnn/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">ponelson.github.io/kkhn</a> <span class="updated inline">· Updated <time datetime="2026-09-02">2 September 2026</time></span></div>
       </div>
     </div>
 
     <footer class="reveal d8">
       <span>© <span id="yr"></span> Peter Nelson</span>
       <a href="https://ponelson.github.io/pon/" target="_blank" rel="noopener">ponelson.github.io/pon</a>
-      <div class="verstamp">Peter Nelson — Index v1.7 · build 2026-09-11T08:27-04:00 · supersedes v1.6 (2026-09-11T08:18-04:00). Changes in v1.7: labeled password-protected projects in Philosophy and Money &amp; Markets. v1.6 added Hysteresis &amp; Memory under Philosophy and Compute Market under Technology.</div>
+      <div class="verstamp">Peter Nelson — Index v1.9 · build 2026-09-21T08:03-04:00 · supersedes v1.8 (2026-09-21T07:56-04:00). Changes in v1.9: moved Curiosities above Technology; added Financial Tools (FINRA Exam Prep, Healthcare Calculator) below Money &amp; Markets; added Special Ops (Agentic Memory 2026, Institutional Capital, Insurance), title and password note only. v1.8 added last-updated dates, the Curiosities section, and moved Sports and Crown Supply to Money &amp; Markets.</div>
     </footer>
   </main>
 
